@@ -1,0 +1,29 @@
+[workspace]
+resolver = "3"
+default-members = ["apps/chaos-engine"]
+members = [
+    "apps/chaos-engine",
+    "crates/*"
+]
+
+[workspace.package]
+authors = ["Nguyễn Quý Ngọc"]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.97.0"
+repository = "https://github.com/ChaoswareHQ/chaos-engine"
+homepage = "https://github.com/ChaoswareHQ/chaos-engine"
+documentation = "https://chaoswarehq.github.io/chaos-engine/"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+
+[workspace.dependencies]
+audio = { path = "crates/audio" }
+base = { path = "crates/base" }
+gfx = { path = "crates/gfx" }
+
+x-audio = "0.1.0"
+x-gfx = "0.1.0"
+
+anyhow = "1.0.103"
+thiserror = "2.0.18"
